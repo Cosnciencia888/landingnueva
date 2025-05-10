@@ -1,0 +1,186 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEUS Custom</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <style>
+    /* ======= Variables de color ======= */
+    :root {
+      --color-bg: #0A0A0A;          /* Fondo general */
+      --color-primary: #4A90E2;     /* Color principal de botones/links */
+      --color-secondary: #F5A623;   /* Color secundario/acento */
+      --color-text: #FFFFFF;        /* Color de texto principal */
+      --color-muted: #CCCCCC;       /* Texto menor */
+    }
+    /* ======= Reset y base ======= */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* ======= Modal Hero ======= */
+    .modal {
+      width: 100vw; height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.8);
+      position: relative;
+    }
+    .modal-content {
+      text-align: center;
+      padding: 2rem;
+    }
+    .modal-title {
+      font-weight: 600;
+      margin: 0.5rem 0;
+    }
+    #contactButton {
+      background: var(--color-primary);
+      color: var(--color-text);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #contactButton:hover {
+      background: var(--color-secondary);
+    }
+
+    /* ======= Carrusel ======= */
+    .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    .carousel-container img {
+      max-height: 200px;
+      border-radius: 1rem;
+    }
+
+    /* ======= Secciones de iconos ======= */
+    .first-icon-row,
+    .second-icon-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .icon-item {
+      text-align: center;
+      color: var(--color-muted);
+    }
+    .icon-item span {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    /* ======= Grid central ======= */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .image-grid img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    /* ======= Sección grande ======= */
+    .big-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .big-images img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO MODAL -->
+  <div class="modal">
+    <div class="modal-content">
+      <h2 class="modal-title">¡TU OFERTA AQUÍ!</h2>
+      <h3 class="modal-title">¡PROMO SOLO HOY!</h3>
+      <h4 class="modal-title">¡NO TE LO PIERDAS!</h4>
+      <a href="https://tuenlace.com" target="_blank">
+        <button id="contactButton">CONTACTO</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- CARRUSEL -->
+  <section class="carousel">
+    <div class="carousel-container">
+      <!-- Cambia las rutas de imagen aquí -->
+      <img src="assets/carousel/first.webp" alt="Imagen 1">
+      <img src="assets/carousel/second.webp" alt="Imagen 2">
+      <img src="assets/carousel/third.webp" alt="Imagen 3">
+      <img src="assets/carousel/fourth.webp" alt="Imagen 4">
+    </div>
+  </section>
+
+  <!-- ICONOS PRINCIPALES -->
+  <section class="first-icon-row">
+    <!-- Reemplaza href y src según necesites -->
+    <a class="icon-item" href="https://lobby.enlace.com" target="_blank">
+      <img src="assets/first row/lobby.svg" alt="Lobby">
+      <span>LOBBY</span>
+    </a>
+    <!-- Repite icon-item -->
+  </section>
+
+  <!-- GRID CENTRAL -->
+  <div class="mini-title-container">
+    <span class="mini-title">LOS MEJORES</span>
+  </div>
+  <section class="image-grid">
+    <!-- Actualiza rutas de imágenes -->
+    <img src="assets/center/1.webp" alt="Juego 1">
+    <!-- ... -->
+  </section>
+
+  <!-- SECCIÓN DEPORTES -->
+  <div class="mini-title-container">
+    <span class="mini-title">APUESTAS DEPORTIVAS</span>
+  </div>
+  <section class="big-images">
+    <img src="assets/items/first.webp" alt="Deporte 1">
+    <!-- ... -->
+  </section>
+
+  <!-- Meta Pixel (igual que tu versión) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'TU_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+</body>
+</html>
