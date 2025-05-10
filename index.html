@@ -1,186 +1,217 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZEUS Custom</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Styles -->
-  <style>
-    /* ======= Variables de color ======= */
-    :root {
-      --color-bg: #0A0A0A;          /* Fondo general */
-      --color-primary: #4A90E2;     /* Color principal de botones/links */
-      --color-secondary: #F5A623;   /* Color secundario/acento */
-      --color-text: #FFFFFF;        /* Color de texto principal */
-      --color-muted: #CCCCCC;       /* Texto menor */
-    }
-    /* ======= Reset y base ======= */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--color-bg);
-      color: var(--color-text);
-      padding: 20px;
-      overflow-x: hidden;
-    }
-    a { text-decoration: none; color: inherit; }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZEUS</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '567746778947065');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=567746778947065&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+        </head>
+    <body>
 
-    /* ======= Modal Hero ======= */
-    .modal {
-      width: 100vw; height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(0,0,0,0.8);
-      position: relative;
-    }
-    .modal-content {
-      text-align: center;
-      padding: 2rem;
-    }
-    .modal-title {
-      font-weight: 600;
-      margin: 0.5rem 0;
-    }
-    #contactButton {
-      background: var(--color-primary);
-      color: var(--color-text);
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    #contactButton:hover {
-      background: var(--color-secondary);
-    }
+        <!-- Modal -->
+        <div class="modal">
+            <div class="modal-content">
+                <h2 class="modal-title">¡30% DE BONO EN LA PRIMERA CARGA!</h2>
+                <h3 class="modal-title">¡ATENCIÓN LAS 24HS!</h3>
+                <h4 class="modal-title">¡PAGOS EN EL ACTO!</h4>
+                
+                <!-- Contenedor de Flechas -->
+                <div class="modal-bottom-container">
+                    <div class="arrow-container">
+                        <!-- Flechas hacia abajo -->
+                        <div class="arrow arrow-down"></div>
+                        <div class="arrow arrow-down"></div>
+                        <div class="arrow arrow-down"></div>
+                        <div class="arrow arrow-down"></div>
+                        <div class="arrow arrow-down"></div>
+                        <div class="arrow arrow-down"></div>
+                    </div>
+                    
+                    <!-- Botón -->
+                    <a href="https://wa.me/5491125624313?text=%C2%A1Hola%20buenas.%20Quiero%20informaci%C3%B3n!" target="_blank">
+                        <button id="contactButton"class="modal-button">WHATSAPP</button>
+                    </a>
+                    
+                    <div class="arrow-container">
+                        <!-- Flechas hacia arriba -->
+                        <div class="arrow arrow-up"></div>
+                        <div class="arrow arrow-up"></div>
+                        <div class="arrow arrow-up"></div>
+                        <div class="arrow arrow-up"></div>
+                        <div class="arrow arrow-up"></div>
+                        <div class="arrow arrow-up"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    /* ======= Carrusel ======= */
-    .carousel-container {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-    .carousel-container img {
-      max-height: 200px;
-      border-radius: 1rem;
-    }
 
-    /* ======= Secciones de iconos ======= */
-    .first-icon-row,
-    .second-icon-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .icon-item {
-      text-align: center;
-      color: var(--color-muted);
-    }
-    .icon-item span {
-      display: block;
-      margin-top: 0.5rem;
-      font-size: 0.875rem;
-    }
+        <!-- Carrusel -->
+        <section class="carousel">
+            <div class="carousel-container">
+                <img src="assets/carousel/first.webp" alt="Imagen 1">
+                <img src="assets/carousel/second.webp" alt="Imagen 2">
+                <img src="assets/carousel/third.webp" alt="Imagen 3">
+                <img src="assets/carousel/fourth.webp" alt="Imagen 4">
+            </div>
+        </section>
+    
+        <!-- Primera Hilera de Iconos -->
+        <section class="first-icon-row">
+            <div class="icon-item">
+                <img src="assets/first row/lobby.svg" alt="Lobby">
+                <span>LOBBY</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/main.svg" alt="Main">
+                <span>DESTACADOS</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/New.svg" alt="New">
+                <span>NUEVOS</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/Roulette.svg" alt="Roulette">
+                <span>RULETA</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/Jackpots.svg" alt="Jackpots">
+                <span>JACKPOTS</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/Megaways.svg" alt="Megaways">
+                <span>MEGAWAYS</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/Crash.svg" alt="Crash">
+                <span>CRASH</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/Bingo.svg" alt="Bingo">
+                <span>BINGO</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/Craps.svg" alt="Craps">
+                <span>DADOS</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/first row/Skill.svg" alt="Skill">
+                <span>HABILIDAD</span>
+            </div>
+        </section>
 
-    /* ======= Grid central ======= */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .image-grid img {
-      width: 100%;
-      border-radius: 0.5rem;
-    }
 
-    /* ======= Sección grande ======= */
-    .big-images {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .big-images img {
-      width: 100%;
-      border-radius: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <!-- HERO MODAL -->
-  <div class="modal">
-    <div class="modal-content">
-      <h2 class="modal-title">¡TU OFERTA AQUÍ!</h2>
-      <h3 class="modal-title">¡PROMO SOLO HOY!</h3>
-      <h4 class="modal-title">¡NO TE LO PIERDAS!</h4>
-      <a href="https://tuenlace.com" target="_blank">
-        <button id="contactButton">CONTACTO</button>
-      </a>
-    </div>
-  </div>
+        <!-- Segunda Hilera de Iconos -->
+        <section class="second-icon-row">
+            <div class="icon-item">
+                <img src="assets/second row/rubyplay.webp" alt="Ruby Play">
+                <span>RUBYPLAY</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/second row/pragmatic.webp" alt="Pragmatic">
+                <span>PRAGMATIC</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/second row/pragmatic (1).webp" alt="Pragmatic 1">
+                <span>VIRTUAL SPORTS</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/second row/pragmaticplay.webp" alt="Pragmatic Play">
+                <span>PRAGMATICPLAY</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/second row/vivogaming.webp" alt="Vivo Gaming">
+                <span>VIVOGAMING</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/second row/red rake.webp" alt="Red Rake">
+                <span>RED RAKE</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/second row/evoplay.webp" alt="Evo Play">
+                <span>EVOPLAY</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/second row/platipus.webp" alt="Platipus">
+                <span>PLATIPUS</span>
+            </div>
+            <div class="icon-item">
+                <img src="assets/second row/tom horn.webp" alt="Tom Horn">
+                <span>TOM HORN</span>
+            </div>
+        </section>
 
-  <!-- CARRUSEL -->
-  <section class="carousel">
-    <div class="carousel-container">
-      <!-- Cambia las rutas de imagen aquí -->
-      <img src="assets/carousel/first.webp" alt="Imagen 1">
-      <img src="assets/carousel/second.webp" alt="Imagen 2">
-      <img src="assets/carousel/third.webp" alt="Imagen 3">
-      <img src="assets/carousel/fourth.webp" alt="Imagen 4">
-    </div>
-  </section>
 
-  <!-- ICONOS PRINCIPALES -->
-  <section class="first-icon-row">
-    <!-- Reemplaza href y src según necesites -->
-    <a class="icon-item" href="https://lobby.enlace.com" target="_blank">
-      <img src="assets/first row/lobby.svg" alt="Lobby">
-      <span>LOBBY</span>
-    </a>
-    <!-- Repite icon-item -->
-  </section>
+        <!-- Mini Título 1 -->
+        <div class="mini-title-container">
+            <span class="mini-title">Los Mejores Juegos</span>
+        </div>
 
-  <!-- GRID CENTRAL -->
-  <div class="mini-title-container">
-    <span class="mini-title">LOS MEJORES</span>
-  </div>
-  <section class="image-grid">
-    <!-- Actualiza rutas de imágenes -->
-    <img src="assets/center/1.webp" alt="Juego 1">
-    <!-- ... -->
-  </section>
+        <!-- Tabla de Imágenes -->
+        <section class="image-grid">
+            <img src="assets/center/1.webp" alt="Imagen 1">
+            <img src="assets/center/2.webp" alt="Imagen 2">
+            <img src="assets/center/3.webp" alt="Imagen 3">
+            <img src="assets/center/4.webp" alt="Imagen 4">
+            <img src="assets/center/5.webp" alt="Imagen 5">
+            <img src="assets/center/6.webp" alt="Imagen 6">
+            <img src="assets/center/7.webp" alt="Imagen 7">
+            <img src="assets/center/8.webp" alt="Imagen 8">
+            <img src="assets/center/9.webp" alt="Imagen 9">
+            <img src="assets/center/10.webp" alt="Imagen 10">
+            <img src="assets/center/11.webp" alt="Imagen 11">
+            <img src="assets/center/12.webp" alt="Imagen 12">
+            <img src="assets/center/13.webp" alt="Imagen 13">
+            <img src="assets/center/14.webp" alt="Imagen 14">
+            <img src="assets/center/15.webp" alt="Imagen 15">
+            <img src="assets/center/16.webp" alt="Imagen 16">
+            <img src="assets/center/17.webp" alt="Imagen 17">
+            <img src="assets/center/18.webp" alt="Imagen 18">
+            <img src="assets/center/19.webp" alt="Imagen 19">
+            <img src="assets/center/20.webp" alt="Imagen 20">
+            <img src="assets/center/21.webp" alt="Imagen 21">
+            <img src="assets/center/22.webp" alt="Imagen 22">
+            <img src="assets/center/23.webp" alt="Imagen 23">
+            <img src="assets/center/24.webp" alt="Imagen 24">
+        </section>
 
-  <!-- SECCIÓN DEPORTES -->
-  <div class="mini-title-container">
-    <span class="mini-title">APUESTAS DEPORTIVAS</span>
-  </div>
-  <section class="big-images">
-    <img src="assets/items/first.webp" alt="Deporte 1">
-    <!-- ... -->
-  </section>
 
-  <!-- Meta Pixel (igual que tu versión) -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'TU_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"/>
-  </noscript>
-</body>
+        <!-- Mini Título 2 -->
+        <div class="mini-title-container">
+            <span class="mini-title">Apuestas Deportivas</span>
+        </div>
+
+        <!-- Tres Imágenes Grandes -->
+        <section class="big-images">
+            <img src="assets/items/first.webp" alt="Grande 1">
+            <img src="assets/items/second.webp" alt="Grande 2">
+            <img src="assets/items/third.webp" alt="Grande 3">
+        </section>
+
+        <script>
+          document.getElementById('contactButton').addEventListener('click', function() {
+            fbq('track', 'Contact'); // El evento se llama "Contact"
+          });
+        </script>
+
+        <script src="script.js"></script>
+    </body>
 </html>
